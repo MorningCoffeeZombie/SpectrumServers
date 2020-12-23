@@ -158,7 +158,7 @@ bleur.tabs[ 0 ] = { name = "Работы", hoverColor = Color( 80, 201, 198 ), l
 	end
 end }
 
-bleur.tabs[ 1 ] = { name = "Патроны", hoverColor = Color( 209, 81, 89 ), loadPanels = function( parent, filter )
+bleur.tabs[ 1 ] = { name = "Cartridges", hoverColor = Color( 209, 81, 89 ), loadPanels = function( parent, filter )
 	local scrollPanel = vgui.Create( "bleur_menu_scrollpanel", parent )
 	scrollPanel:SetSize( parent:GetWide(), parent:GetTall() )
 
@@ -220,7 +220,7 @@ bleur.tabs[ 1 ] = { name = "Патроны", hoverColor = Color( 209, 81, 89 ), 
 	end
 end }
 
-bleur.tabs[ 2 ] = { name = "Энтити", hoverColor = Color( 236, 153, 23 ), loadPanels = function( parent, filter )
+bleur.tabs[ 2 ] = { name = "Entity", hoverColor = Color( 236, 153, 23 ), loadPanels = function( parent, filter )
 	local scrollPanel = vgui.Create( "bleur_menu_scrollpanel", parent )
 	scrollPanel:SetSize( parent:GetWide(), parent:GetTall() )
 
@@ -294,7 +294,7 @@ bleur.tabs[ 2 ] = { name = "Энтити", hoverColor = Color( 236, 153, 23 ), l
 	end
 end }
 
-bleur.tabs[ 3 ] = { name = "Оружие", hoverColor = Color( 98, 83, 69 ), loadPanels = function( parent, filter )
+bleur.tabs[ 3 ] = { name = "Weapon", hoverColor = Color( 98, 83, 69 ), loadPanels = function( parent, filter )
 	local scrollPanel = vgui.Create( "bleur_menu_scrollpanel", parent )
 	scrollPanel:SetSize( parent:GetWide(), parent:GetTall() )
 
@@ -422,19 +422,19 @@ bleur.tabs[ 3 ] = { name = "Оружие", hoverColor = Color( 98, 83, 69 ), loa
 	end
 end }
 
-bleur.tabs[ 4 ] = { name = "Сайт", hoverColor = Color( 145, 195, 83 ), loadPanels = function( parent )
+bleur.tabs[ 4 ] = { name = "Website", hoverColor = Color( 145, 195, 83 ), loadPanels = function( parent )
 	local html = vgui.Create( "HTML", parent )
 	html:Dock( FILL )
 	html:OpenURL( bleur.config.webpage )
 end }
 
-bleur.tabs[ 5 ] = { name = "Статистика",	hoverColor = Color( 47, 168, 235 ), loadPanels = function( parent )
+bleur.tabs[ 5 ] = { name = "Statistics",	hoverColor = Color( 47, 168, 235 ), loadPanels = function( parent )
 	local richest = vgui.Create( "DPanel", parent )
 	richest:SetSize( parent:GetWide() * 0.5, parent:GetTall() * 0.5 - 1 )
 	richest:SetPos( 0, 0 )
 	function richest:Paint( w, h )
 		draw.RoundedBox( 0, 0, 0, w, h, Color( 255, 255, 255, 5 ) )
-		draw.SimpleText( "Экономика", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "Economy", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	local richestList = vgui.Create( "bleur_menu_scrollpanel", richest )
 	richestList:SetSize( richest:GetWide() - 2, richest:GetTall() * 0.9 )
@@ -472,7 +472,7 @@ bleur.tabs[ 5 ] = { name = "Статистика",	hoverColor = Color( 47, 168, 
 	jobChart:SetPos( parent:GetWide() * 0.5 + 1, 0 )
 	function jobChart:Paint( w, h )
 		draw.RoundedBox( 0, 0, 0, w, h, Color( 255, 255, 255, 5 ) )
-		draw.SimpleText( "Работы", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "Work", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 	local jobList = vgui.Create( "bleur_menu_scrollpanel", jobChart )
 	jobList:SetSize( jobChart:GetWide() - 2, jobChart:GetTall() * 0.9 )
@@ -505,7 +505,7 @@ bleur.tabs[ 5 ] = { name = "Статистика",	hoverColor = Color( 47, 168, 
 	gameStats:SetPos( 0, parent:GetTall() * 0.5 )
 	function gameStats:Paint( w, h )
 		draw.RoundedBox( 0, 0, 0, w, h, Color( 255, 255, 255, 5 ) )
-		draw.SimpleText( "Информация", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "Information", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 
 	local gameStatsList = vgui.Create( "bleur_menu_scrollpanel", gameStats )
@@ -530,7 +530,7 @@ bleur.tabs[ 5 ] = { name = "Статистика",	hoverColor = Color( 47, 168, 
 	staffOnline:SetPos( parent:GetWide() * 0.5 + 1, parent:GetTall() * 0.5 )
 	function staffOnline:Paint( w, h )
 		draw.RoundedBox( 0, 0, 0, w, h, Color( 255, 255, 255, 5 ) )
-		draw.SimpleText( "Админы", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
+		draw.SimpleText( "Admins", "bleur_menu18", w / 2, 18, Color( 255, 255, 255, 200 ), TEXT_ALIGN_CENTER, TEXT_ALIGN_CENTER )
 	end
 
 	local staffList = vgui.Create( "bleur_menu_scrollpanel", staffOnline )
@@ -556,7 +556,7 @@ bleur.tabs[ 5 ] = { name = "Статистика",	hoverColor = Color( 47, 168, 
 	end
 end }
 
-bleur.tabs[ 6 ] = { name = "Настройки", hoverColor = Color( 177, 54, 95 ), loadPanels = function( parent )
+bleur.tabs[ 6 ] = { name = "Settings", hoverColor = Color( 177, 54, 95 ), loadPanels = function( parent )
 	local i = 0
 	for var, val in pairs( bleur.settings ) do
 		local setting = vgui.Create( "DLabel", parent )
@@ -578,7 +578,7 @@ bleur.tabs[ 6 ] = { name = "Настройки", hoverColor = Color( 177, 54, 95
 	end
 end }
 
-bleur.tabs[ 7 ] = { name = "Команды", hoverColor = Color( 108, 17, 207 ), loadPanels = function( parent )
+bleur.tabs[ 7 ] = { name = "Commands", hoverColor = Color( 108, 17, 207 ), loadPanels = function( parent )
 	local r = 0
 	for i, data in pairs( bleur.commands ) do
 		if not data.restrict or data.restrict( LocalPlayer() ) then
