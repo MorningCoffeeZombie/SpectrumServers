@@ -1,0 +1,23 @@
+Hey, thank you for buying my addon, hope you will enjoy it, please don't forget to leave a review!
+
+The installation is very easy, just drop the folder "org" in addons.
+If you want to configure the addon just edit the file "org\lua\orgs\sh_orgconfig.lua"
+If you want to use the addon with MYSQL just edit the file "org\lua\orgs\server\MySQL.lua" and make sure you got the this https://facepunch.com/showthread.php?t=1220537
+If you want to translate the addon just edit the file "org\lua\orgs\sh_orglang.lua"
+
+This is it.
+
+--Basic commands!
+
+1) !orgnpc - To create new npc
+2) !orghelp - To show those commands
+3) !orgmenu - To open the organisation menu
+4) !orgc [text] - To talk in the organisation chat
+5) !orgadmin - Admin menu
+
+If you have questions feel free to add me on Steam.
+
+http://steamcommunity.com/id/BareL1/
+
+
+NOTE: IF YOU HAD THIS ADDON BEFORE - REMOVE THE VERSION THAT YOU HAD, THE ADDON IS NOT USING "MYSQLOO" ANYMORE
